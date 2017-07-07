@@ -101,5 +101,45 @@ $(function() {
         }
     })
 
+    var usersChart = new Chart($('#users-chart'), {
+        type: 'line',
+        data: {
+            labels: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+            datasets: [{
+              label: "用户",
+              data: [80, 280, 480, 800, 1000, 1400, 1900, 2400, 3100, 4000],
+              backgroundColor: 'rgba(142, 229, 200, 1)',
+              borderColor: 'rgba(142, 229, 200, 1)',
+              fill: false,
+              pointStyle: 'line'
+            }, {
+              label: "作者",
+              data: [20, 120, 420, 800, 1500, 2200, 3000, 4000, 5000, 6000],
+              backgroundColor: 'rgba(142, 166, 230, 1)',
+              borderColor: 'rgba(142, 166, 230, 1)',
+              fill: false,
+              pointStyle: 'line'
+            }]
+        },
+        options: {
+            scales: {
+              xAxes: [{
+                display: true,
+                scaleLabel: {
+                  display: true,
+                  labelString: '传播'
+                }
+              }],
+              yAxes: [{
+                display: true,
+                scaleLabel: {
+                  display: true,
+                  labelString: '收入'
+                }
+              }]
+            }
+        }
+    })
+
     $('#safe-tips-modal').modal('show')
 });

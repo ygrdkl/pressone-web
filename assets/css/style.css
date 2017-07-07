@@ -47,6 +47,10 @@
   max-width: 300px;
 }
 
+#users-chart {
+  max-width: 500px;
+}
+
 @media (min-width: 768px) {
   #now-chart, #content-chart {
     margin-left: 120px;
