@@ -1,224 +1,516 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
-		<title>Press.One</title>
+    <title>PressOne</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <!-- Styles -->
+    <link href="assets/css/core.min.css" rel="stylesheet">
+    <link href="assets/css/thesaas.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
-		<style type="text/css">
-			#title h1 {text-transform: capitalize;}
-			#title p {
-				text-align: center;
-				font-size: 0.8em;
-			}
-			.reveal p {
-				text-align: left;
-				margin: 1.2em 1em;
-			}
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
+  </head>
 
-			#language {
-				position: absolute;
-				top: 1em;
-				right: 1em;
-				font-size: 0.4em;
-				z-index: 999;
-			}
-		</style>
+  <body>
 
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
 
-	</head>
+    <!-- Topbar -->
+    <nav class="topbar topbar-inverse topbar-expand-sm">
+      <div class="container">
 
-	<body>
-		<div class="reveal">
-			<div id="language">
-				English | <a href="/cn">中文</a>
-			</div>
+        <div class="topbar-left">
+          <a class="topbar-brand" href="/">
+            <img class="logo-inverse" src="assets/img/pressone-logo.gif" alt="logo">
+            <span id="brand-title">PressOne</span>
+          </a>
+        </div>
 
-			<div class="slides">
-				<section data-markdown id="title">
-					<textarea data-template>
-							# Press.One
+        <div class="topbar-right">
+          <a class="btn btn-sm btn-outline btn-white" href="/cn">中文</a>
+        </div>
 
-							by XiaoLai Li
-					</textarea>
-				</section>
+      </div>
+    </nav>
+    <!-- END Topbar -->
 
-				<section data-markdown>
-					<textarea data-template>
-						If Bitcoin is the first successful blockchain application that
-						revolutionized the business model of banks in a decentralized way,
-						then PressOne will revolutionize the business model of the press
-						by decentralizing how content providers connect and get rewarded.
-					</textarea>
-				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						PressOne will possibly become the biggest public chain on the Internet.
+    <!-- Header -->
+    <header class="header header-inverse h-fullscreen p-0 bg-primary overflow-hidden" style="background-image: linear-gradient(to right, #434343 0%, black 100%);">
+      <canvas class="constellation"></canvas>
 
-						Since the Internet comprises of contents, such as texts, images, sounds or videos,
-						revolutionizing existing distribution channels may well mean to "reconstruct the whole Internet".
+      <div class="container text-center">
 
-						PressOne will quite possibly become the most natural and profuse public chain of
-						DAPPs (decentralized applications).
-					</textarea>
-				</section>
+        <div class="row h-full align-items-center">
+          <div class="col-12 col-md-8 offset-md-2">
 
-				<section data-markdown>
-					<textarea data-template>
-						Content-creation business consists of three parts: production, discovery and distribution.
+            <h1 class="display-4">Decentralized content publishing</h1>
+            <br>
+            <p class="lead text-white fs-20">
+              Press.One is a Content Distribution Public Chain (CDPC) based on the EOS blockchain infrastructure,
+              people can create various content applications based on this public chain:
+            </p>
+            <p class="lead fs-20" id="applications-typing">
+              <span class="text-primary" data-type="Forum, Wiki, Blog, E-Commerce, Music publishing, Photo sharing, Video streaming"></span>
+            </p>
+            <!-- <br>
+            <h3></h3>
+            <br>
+            <div class="countdown countdown-sm countdown-outline countdown-inverse countdown-uppercase" data-countdown="2017/07/12"></div> -->
+          </div>
+        </div>
 
-						Production must be provided by outstanding individuals or teams,
-						and thus it does not have to be decentralized.
-					</textarea>
-				</section>
+        <div id="safe-alerts" class="alert alert-danger alert-dismissible fade in" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <p>
+            Attention: We inform users only through this website.
+          </p>
+        </div>
 
-				<section data-markdown>
-					<textarea data-template>
-						Discovery and distribution, however, are where a decentralized network gains an edge…
+      </div>
 
-						By decentralizing discovery and distribution,
-						content producers no longer need to rely on one or a few parties to
-						compensate them for producing content - rather, they are rewarded by the crowd.
-					</textarea>
-				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						When a piece of work is finished, the market will take care of the rest.
-						Releasing a new work means publishing a new "asset" (the securitization of content),
-						and its value will be proved by the market.
+    </header>
+    <!-- END Header -->
 
-						In this way, the producer, discoverer and distributor's roles may overlap,
-						but any of them could seek profit from any of these activities.
-					</textarea>
-				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						Using a real-name system in decentralized protocols is not nearly scary
-						as some people have imagined.
-						On the contrary, it may encourage people to make reliable comments…
+    <!-- Main container -->
+    <main class="main-content">
 
-						If anyone intends to hide his/her identity,
-						then luckily they have no worries —
-						for there are countless other ways and places on the Internet that one can assume anonymity...
-					</textarea>
-				</section>
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Features
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section bg-gray">
+        <div class="container">
+          <header class="section-header">
+            <h2>What we do</h2>
+            <hr>
+            <p class="lead">
+              The time has come for centralized content distribution models to be disrupted.
+            </p>
+          </header>
 
-				<section data-markdown>
-					<textarea data-template>
-						Sensible censorship by the decentralized protocol is also not terrifying,
-						for it can enhance the quality of contents. and keep the community members safe.
 
-						Censorship does not always constrain freedom for a similar reason:
-						if one hates censorship, plenty of ways and places are available on the Internet.
-					</textarea>
-				</section>
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-7">
+              <h4>Current problems of centralized publishing and distribution models</h4>
+              <p>
+                Because accounts are not public,
+                the cost to publishers of cheating approaches zero; sales figures are not necessarily accurate,
+                so royalties due to creators are often secretly embezzled.
+                Fake sales figures have in effect become a common “sales tactic”,
+                so “non-standard calculation of royalties” has become commonplace.
+                On the one hand, the monopoly of publishers gives them incentive to present poor work as quality work;
+                at the same time, it has led to a decline in their ability to select quality work (this ability is often even lower than average).
+              </p>
+              <p>
+                However, an even bigger problem is the distribution of benefits in the content industry.
+                If benefits were distributed more reasonably, a lot of problems could be easily solved.
+                To take books as an example, authors usually receive a royalty of 7-15%, and printing costs are around 10%
+                (depending on printing numbers and design).
+                What happens to the other 75%? It goes to many links in the process that actually have absolutely no reason to exist…
+                In the Internet age, even the printing costs can be removed, right?
+              </p>
+            </div>
 
-				<section data-markdown>
-					<textarea data-template>
-						PressOne is not merely a Chinese project.
-						The mechanisms it provides are the same for people of any nationality,
-						race, gender, language, etc.
+            <div class="col-12 col-md-5">
+              <canvas class="rounded chart" id="now-chart">
+            </div>
+          </div>
 
-						Nor is PressOne a competitor of Steem.
-						In fact, we are collaborators — complementary to meet different needs.
-					</textarea>
-				</section>
+          <hr>
 
-				<section data-markdown>
-					<textarea data-template>
-						Traditional "whitepapers" will not be provided before the official launch of PressOne
-						(truth is, rarely do people read or understand whitepapers).
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-5">
+              <canvas class="rounded chart" id="future-chart">
+            </div>
 
-						When PressOne will be officially released,
-						ever-perfecting documentations will be provided to support succeeding developers.
-					</textarea>
-				</section>
+            <div class="col-12 col-md-7">
+              <h4>Use the method of decentralization to reconstruct the system’s distribution of benefits</h4>
+              <p>
+                The remarkable thing about the blockchain as the underlying protocol of the new Internet is that
+                all applications built using it as a base naturally have an essentially independent economic system,
+                so developers can use smart contracts to define the principles of benefit distribution for this new economic system.
+              </p>
+              <p>
+                After decentralization (or we could say after “disintermediation”,
+                since publishers often merely act as an intermediary that could be replaced by machines or programs),
+                the content industry is only left with two basic roles: Producer and User,
+                thus a reallocation of benefits can easily be very effective.
+              </p>
+            </div>
+          </div>
 
-				<section data-markdown>
-					<textarea data-template>
-						Based on PressOne, developers and operators can easily
-						build various content circles, social media, etc.
+          <hr>
 
-						This will not be just a game for tech geeks,
-						but an invaluable opportunity for all to ride on the latest trend.
-						They don't need to know technologies or blockchain —
-						just like anybody can use cash without profound financial knowledge.
-					</textarea>
-				</section>
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-7">
+              <h4>New content types in new system</h4>
+              <p>
+                Content will only be divided into two types: paid contents or paying contens.
+                I have content, you want to see it, you must pay me. This is paid content — novels, music, movies, and TV shows are all of this type.
+                I have some other content, I want to pay you to see it — ads are of this type of content.
+              </p>
+              <p>
+                In this very simple system, free content doesn’t exist, and has no reason to exist,
+                because payments can be extremely low.
+                But, content must be either paid or paying, and even if the payment is very close to zero,
+                it must be greater than zero — this point is very important, and it is an extremely effective method of eliminating 99.99% of spam.
+              </p>
+            </div>
 
-				<section data-markdown>
-					<textarea data-template>
-						PressOne can be imagined as a giant incubator.
-						We will organize "campaigns" for entities that intend to grow vertically,
-						and circle members will select the best candidates or teams possible to "go on the expedition".
-					</textarea>
-				</section>
+            <div class="col-12 col-md-5">
+              <canvas class="rounded chart" id="content-chart">
+            </div>
+          </div>
 
-				<section data-markdown>
-					<textarea data-template>
-						PressOne is not a company — in the blockchain world,
-						a company entity is not theoretically necessary.
-						The ideal objective of a successful blockchain project is to
-						build a decentralized self-autonomous enterprise/organization.
+          <hr>
 
-						All of the rules should be written in the smart contract,
-						rather than enforced by management.
-						Only in this way can it be sustainable and scalable.
-					</textarea>
-				</section>
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-5">
+              <canvas class="rounded chart" id="users-chart">
+            </div>
 
-				<section data-markdown>
-					<textarea data-template>
-						Why us?
+            <div class="col-12 col-md-7">
+              <h4>New user behaviors in new system</h4>
+              <p>
+                There are two types of evaluation: prevent further circulation(negative) and promote further circulation or share(positive).
+              </p>
+              <p>
+                Promoting the circulation of good content and preventing the circulation of poor content is good for the entire system.
+                Conversely, promoting the circulation of poor content and preventing the circulation of good content is bad for the system.
+                Therefore, a consensus mechanism can be used to grade active users, allowing the system to judge user activity with a credibility rating.
+              </p>
+              <p>
+                Once a user has shared content,
+                they have effectively exercised their “distribution ability”,
+                so they should receive a “distribution reward paid according to results”.
+                A share will trigger more shares, and in a world of digital currency,
+                a multi-level distribution system should be more easily realized.
+              </p>
+            </div>
+          </div>
 
-						First, we are based in China, a country with world's most Internet users.
-						Second, Chinese developers are global leaders in user experience.
-						Our dev team come from all over the world,
-						and their work experience in the blockchain world adds up to more than a hundred years.
+          <hr>
 
-						We also have massive resources: simply imagine knewone.com built on PressOne…
-					</textarea>
-				</section>
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-7">
+              <h4>A content publishing revolution</h4>
+              <p>
+                  In this decentralized system, since the intermediaries have been replaced by systems and programs,
+                  in addition to the system’s effectiveness being greatly increased,
+                  the costs of operation of the system are greatly reduced.
+              </p>
+              <p>
+                And of the three main activities of the content industry (production, discovery, and distribution),
+                two (discovery and distribution) are completely carried out by the user.
+                In addition, the new benefit distribution method gives them sufficient motivation to do a better job…
+              </p>
+              <p>
+                 Another effect is that production will be better, and quality producers will be unperturbed* —
+                 all they need to do is ensure that they create things that the world really needs,
+                 and they have no need to worry that their talents will go unrecognized…
+              </p>
+            </div>
 
-			</div>
-		</div>
+            <div class="col-12 col-md-5">
+                <img class="rounded shadow-2" src="assets/img/bg-man.jpg" alt="...">
+            </div>
+          </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        </div>
+      </section>
 
-		<script>
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Features
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section">
+        <div class="container">
+          <header class="section-header mb-0">
+            <small><strong>Welcome</strong></small>
+            <h2>Decentralized new world</h2>
+            <br>
+          </header>
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          <div class="row gap-y">
 
-		  ga('create', 'UA-101243619-1', 'auto');
-		  ga('send', 'pageview');
+            <div class="col-12 offset-md-2 col-md-8 mb-30">
+              <img src="assets/img/blockchain-apps.jpg" alt="...">
+            </div>
 
-	</script>
-	</body>
+            <div class="row no-gap">
+
+              <div class="col-12 col-md-6 p-60">
+                <p class="iconbox iconbox-xxl">
+                  <i class="icon-cloud fs-40"></i>
+                </p>
+                <br><br>
+                <h5>Ecosystem and Incubator</h5>
+                <br>
+                <p>
+                  No one application can “satisfy all needs”,
+                  so many types of applications can be developed on this public chain.
+                  Press.One is not simply an EOS application,
+                  but more like a blockchain application incubator.
+                  On the basis of Press.One, we will invest in and develop many specific applications.
+                </p>
+                <p>
+                  This might be a small opportunity for developers to quickly enter the top level of the blockchain world.
+                  Most of the funds raised from the ICO will be invested into the incubator,
+                  and Press.One will gradually build a rich content distribution system through training, incubation, and acceleration.
+                </p>
+                <p>
+                  The first Press.One application is easy to understand:
+                  it is a content distribution system based on strong ties.
+                  In fact, you have seen this before, as the WeChat Public Platform is this type of system.
+                  It’s just that Press.One has added smart contracts, and is not only displayed in a real-time communication tool…
+                </p>
+              </div>
+
+
+              <div class="col-12 col-md-6 p-60">
+                <p class="iconbox iconbox-xxl">
+                  <i class="icon-linegraph fs-40"></i>
+                </p>
+                <br><br>
+                <h5>Implementation</h5>
+                <br>
+                <p>
+                  From a design perspective, we will divide the system into two layers.
+                  You can think of the base layer as “the operating system”,
+                  and the top layer as “applications”.
+                </p>
+                <p>
+                  Elements such as the transparent, open and irrevocable accounts, the decentralized data storage,
+                  and the basic structure for smart contracts will go in the base layer.
+                  The top layer applications, such as those used to handle the business logic,
+                  actually do not require the decentralized process.
+                </p>
+                <p>
+                  The development process will be parallel.
+                  Since Press.One is based on the EOS basic framework, the base layer development will stay in line with the EOS roadmap.
+                  Before the EOS public beta, we will complete the first,
+                  non-blockchain private and public beta of the Press.One application,
+                  in which all of the system’s smart contracts will be “mock contracts”.
+                  Once the EOS public beta is released, we will develop a public chain based on EOS, and quickly complete the switch of the base layer.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-user fs-25 pt-4 text-secondary"></i>
+                </div>
+                <div>
+                  <h5>Real-name Registration</h5>
+                  <p>
+                    Nicknames may be used in the system,
+                    but at its core the system should be a real-name registration user system.
+                    Only users who have completed real-name registration will be able to publish,
+                    comment and share content.
+                    Because each user action goes along with a transaction that is guaranteed by smart contracts,
+                    a real-name system is a necessary component for the system’s culture and safety.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-filter fs-25 pt-4 text-secondary"></i>
+                </div>
+
+                <div>
+                  <h5>Content Filtering Mechanism</h5>
+                  <p>
+                    Real-name registration is already the most effective method of content filtering.
+                    We believe that unlimited freedom of speech is not a good thing,
+                    as some forms of speech are poisonous, or even harmful to humanity.
+                    It is possible to use a “consensus mechanism”,
+                    one of the principles of the blockchain,
+                    to realize a “reasonable content filtering mechanism based on consensus”.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-registered fs-25 pt-4 text-secondary"></i>
+                </div>
+
+                <div>
+                  <h5>Irrevocability</h5>
+                  <p>
+                    There is some data that should be irrevocable.
+                    Date stamps, for instance, are one of the key factors for determining copyright.
+                    But other data, such as many versions and drafts before a final version,
+                    does not in theory need to be “irrevocable”. Other data may even need to be destroyed,
+                    such as child pornography. Thus, the data on the public chain is not necessarily complete data,
+                    but is a hash signed by three parties, and smart contracts can in certain specific situations
+                    destroy the private key of the encrypted data.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-fire fs-25 pt-4 text-secondary"></i>
+                </div>
+
+                <div>
+                  <h5>Anti-spam Mechanism</h5>
+                  <p>
+                    In addition to spam advertisements, all kinds of piracy and plagiarism can be considered spam.
+                    While it’s difficult to completely eliminate spam,
+                    we can use the principle of “forcing all content to transact” to greatly reduce the amount of spam.
+                    Because this is a real-name registration system, piracy will reduce a users credibility, greatly increasing the “cost of crime”.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-refresh fs-25 pt-4 text-secondary"></i>
+                </div>
+
+                <div>
+                  <h5>Currency Recovery Mechanism</h5>
+                  <p>
+                    The system will receive a certain amount of the distributed benefits.
+                    Looking at it from another perspective,
+                    this is in effect the currency recovery mechanism of an economic system —
+                    this type of currency recovery system will in turn stimulate the circulation of the currency in the economic system.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-btc fs-25 pt-4 text-secondary"></i>
+                </div>
+
+                <div>
+                  <h5>Transactions Between Applications</h5>
+                  <p>
+                    Even though users will quite possible use a single open account system,
+                    they may hold multiple types of tokens.
+                    However, because each conversion can in fact be “painlessly” executed by using smart contracts, this will not necessarily cause problems.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Features
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section">
+        <div class="container">
+          <header class="section-header mb-0">
+            <h2>Management Team</h2>
+            <br>
+          </header>
+
+          <div class="row gap-y">
+            <div class="col-12 col-md-4 team-2">
+              <a href="#">
+                <img class="team-avatar" src="assets/img/xiaolai.jpg" alt="...">
+              </a>
+              <h5>Xiaolai Li</h5>
+              <small>CEO</small>
+              <p>
+                7 years of blockchain industry experience, well-known investor in the field, serial entrepreneur
+              </p>
+              <br>
+              <div class="social social-boxed social-rounded social-gray">
+                <a class="social-twitter" href="https://twitter.com/xiaolai"><i class="fa fa-twitter"></i></a>
+                <a class="social-weibo" href="http://weibo.com/bylixiaolai"><i class="fa fa-weibo"></i></a>
+                <a class="social-mail" href="mailto:lixiaolai@gmail.com"><i class="fa fa-envelope"></i></a>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-4 team-2">
+              <a href="#">
+                <img class="team-avatar" src="assets/img/lilu.jpg" alt="...">
+              </a>
+              <h5>Lu Li</h5>
+              <small>CTO</small>
+              <p>
+                10 years of software development experience, former KnewOne/Less CEO, serial entrepreneur
+              </p>
+              <br>
+              <div class="social social-boxed social-rounded social-gray">
+                <a class="social-github" href="https://github.com/lilu"><i class="fa fa-github"></i></a>
+                <a class="social-weibo" href="http://weibo.com/coocooba/"><i class="fa fa-weibo"></i></a>
+                <a class="social-mail" href="mailto:lilu@press.one"><i class="fa fa-envelope"></i></a>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-4 team-2">
+              <a href="#">
+                <img class="team-avatar" src="assets/img/inblockchain.jpg" alt="...">
+              </a>
+              <h5>InBlockchain</h5>
+              <small>Director</small>
+              <p>
+                Investing platform in blockchain industry, invested Steem, EOS, Sia, Zcash, QTUM and so on
+              </p>
+              <br>
+              <div class="social social-boxed social-rounded social-gray">
+                <a class="social-link" href="http://inblockchain.com"><i class="fa fa-globe"></i></a>
+                <a class="social-mail" href="mailto:m@inblockchain.com"><i class="fa fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+    </main>
+    <!-- END Main container -->
+
+
+    <!-- Scripts -->
+    <script src="assets/js/core.min.js"></script>
+    <script src="assets/js/thesaas.min.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+  </body>
 </html>
