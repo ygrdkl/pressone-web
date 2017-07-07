@@ -141,5 +141,4 @@ $(function() {
         }
     })
 
-    $('#safe-tips-modal').modal('show')
 });
