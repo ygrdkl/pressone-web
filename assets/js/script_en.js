@@ -127,7 +127,7 @@ $(function() {
                 display: true,
                 scaleLabel: {
                   display: true,
-                  labelString: 'Propgation'
+                  labelString: 'Propagation'
                 }
               }],
               yAxes: [{
