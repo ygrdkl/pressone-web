@@ -6,8 +6,8 @@
 
 		<title>Press.One</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="assets/css/reveal.css">
+		<link rel="stylesheet" href="assets/css/reveal-theme.css">
 
 		<style type="text/css">
 			#title h1 {text-transform: capitalize;}
@@ -33,7 +33,9 @@
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ?
+				'assets/css/reveal-pdf.css' :
+				'assets/css/reveal-paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
@@ -42,7 +44,7 @@
 	<body>
 		<div class="reveal">
 			<div id="language">
-				<a href="/en">English</a> | 中文
+				<a href="/pitch_en">English</a> | 中文
 			</div>
 
 			<div class="slides">
@@ -165,15 +167,14 @@
 			</div>
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="assets/js/head.min.js"></script>
+		<script src="assets/js/reveal.js"></script>
 
 		<script>
 			Reveal.initialize({
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'assets/js/reveal-marked.js' },
+					{ src: 'assets/js/reveal-markdown.js' }
 				]
 			});
 		</script>
@@ -186,7 +187,6 @@
 
 		  ga('create', 'UA-101243619-1', 'auto');
 		  ga('send', 'pageview');
-
 	</script>
 	</body>
 </html>
