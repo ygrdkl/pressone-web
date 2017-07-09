@@ -82,3 +82,33 @@
 #safe-alerts button {
   padding-bottom: 0;
 }
+
+#publish-nav {
+  background-color: #333;
+}
+
+#publish-title {
+  font-size: 1.5rem;
+}
+
+#publish-section {
+  max-width: 920px;
+  margin: 1.5rem auto;
+}
+
+#publish-link {
+  color: #0facf3;
+}
+
+#publish-alert {
+  color: #c9302c;
+  padding-bottom: 1em;
+}
+
+#publish-rules-title {
+  padding: .5em 0 1em;
+}
+
+.no-trailing-blank {
+  margin-bottom: 0;
+}
