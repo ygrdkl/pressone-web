@@ -112,3 +112,7 @@
 .no-trailing-blank {
   margin-bottom: 0;
 }
+
+#publish-footer {
+  background: #333;
+}
